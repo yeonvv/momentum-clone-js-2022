@@ -13,7 +13,7 @@ function onGeoOk(position) {
       weather.appendChild(temp);
       curWeather.innerText = data.name;
       curCity.innerText = data.weather[0].main;
-      temp.innerText = `/${data.main.temp}`;
+      temp.innerText = `/${Math.round(data.main.temp)} ℃`;
     })
   );
 }

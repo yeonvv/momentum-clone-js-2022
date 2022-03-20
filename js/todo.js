@@ -5,6 +5,7 @@ const todoList = document.getElementById("todo-list");
 const TODOS_KEY = "todos";
 
 let todos = [];
+
 function saveToDo() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
 }
@@ -21,9 +22,10 @@ function paintToDo(todo) {
   span.innerText = todo.text;
   const btn = document.createElement("button");
   btn.innerText = "❌";
-  li.prepend(span);
-  li.append(btn);
+  li.prepend(btn);
+  li.append(span);
   todoList.append(li);
+
   btn.addEventListener("click", deleteToDo);
 }
 function handleToDoSubmit(event) {

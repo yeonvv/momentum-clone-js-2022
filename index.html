@@ -8,26 +8,32 @@
     <title>Document</title>
   </head>
   <body>
-    <h2 id="clock"></h2>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
     <form id="login-form" class="hidden">
       <input
         required
         minlength="2"
         maxlength="10"
         type="text"
-        placeholder="Please write your name"
+        placeholder="What's your name?"
       />
-      <button>Log In</button>
     </form>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
     <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
+    <h2 id="clock"></h2>
+    <div id="todo">
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="What's your ToDo? I'll remember that."
+          required
+        />
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+
     <div id="quote">
       <span></span>
       <span></span>
@@ -38,6 +44,5 @@
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
-    <img src="" />
   </body>
 </html>
